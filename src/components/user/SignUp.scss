@@ -1,0 +1,67 @@
+$grey: #555b6e;
+$dark-blue: #89b0ae;
+$light-blue: #bee3db;
+$white: #faf9f9;
+$orange: #ffd6ba;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 544px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+.sign-up {
+  padding: 0;
+  background: $dark-blue;
+  border: 10px solid $light-blue;
+  height: 100%;
+  width: 100%;
+  color: $white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin-top: 2vh;
+  }
+
+  .input {
+    margin: .5vh;
+    padding: .5vh;
+    border-radius: 15px;
+    border: white;
+  }
+
+  .sign-up-button {
+    height: 2.5rem;
+    // width: 5rem;
+    min-width: 4.5rem;
+    margin-top: 3vh;
+    background: $grey;
+    color: $white;
+    border: 3px solid $white;
+    border-radius: 15px;
+    font-family: raisonne;
+    margin-bottom: 2rem;
+
+    @include md {
+      // width: 10vw;
+      margin-bottom: 0;
+    }
+
+  }
+}

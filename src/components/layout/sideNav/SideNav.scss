@@ -1,0 +1,129 @@
+$grey: #555b6e;
+$dark-blue: #89b0ae;
+$light-blue: #bee3db;
+$white: #faf9f9;
+$orange: #ffd6ba;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 544px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin rwd($screen) {
+  @media (min-width: $screen+'px') {
+    @content;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 100vh !important;
+  z-index: 100;
+  // width: 4vw;
+
+  @include lg {
+    width: 5rem;
+  }
+
+  @include sm {
+    width: 4rem;
+  }
+
+  background: $dark-blue;
+  text-shadow: -3px 3px 0px $grey;
+  box-shadow: 2px 2px rgba(0, 98, 90, 0.4),
+  4px 4px rgba(0, 98, 90, 0.3),
+  6px 6px rgba(0, 98, 90, 0.2);
+
+  .material-icons {
+    // font-size: 3vw;
+    font-size: 2.5rem;
+    color: white;
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50vh;
+    margin-top: 25vh;
+    align-items: center;
+  }
+
+  .home {
+    // height: 6vw;
+    // width: 6vw;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    background: $grey;
+    border: 5px solid $grey;
+    text-align: center;
+    box-shadow: 2px 2px rgba(0, 98, 90, 0.4),
+      4px 4px rgba(0, 98, 90, 0.3),
+      6px 6px rgba(0, 98, 90, 0.2);
+
+    &:hover {
+      transform: scale(1.1)
+    }
+
+    .material-icons {
+      // font-size: 5vw;
+      font-size: 3rem;
+    }
+  }
+}

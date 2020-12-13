@@ -1,0 +1,13 @@
+export const SIGN_UP_PENDING = "SIGN_UP_PENDING";
+export const SIGN_UP_FULFILLED = "SIGN_UP_FULFILLED";
+export const SIGN_UP_REJECTED = "SIGN_UP_REJECTED";
+
+export const SET_AUTH = "SET_AUTH";
+export const GET_AUTH_SUCCESS = "GET_AUTH_SUCCESS";
+
+export const LOGIN_PENDING = "LOGIN_PENDING";
+export const LOGIN_FULFILLED = "LOGIN_FULFILLED";
+export const LOGIN_CHANGE = "LOGIN_CHANGE";
+export const LOGIN_FORM_RESET = "LOGIN_FORM_RESET";
+export const LOGIN_REJECTED = "LOGIN_REJECTED";
+export const LOGOUT = "LOGOUT";

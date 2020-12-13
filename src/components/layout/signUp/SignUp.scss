@@ -1,0 +1,158 @@
+$grey: #555b6e;
+$dark-blue: #89b0ae;
+$light-blue: #bee3db;
+$white: #faf9f9;
+$orange: #ffd6ba;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 544px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin rwd($screen) {
+  @media (min-width: $screen+'px') {
+    @content;
+  }
+}
+
+.signup-container {
+  text-align: center;
+  background-color: $light-blue;
+  height: 35rem;
+  font-family: raisonne;
+  color: $grey;
+
+  @include md {
+    height: auto;
+  }
+
+  .signup-box {
+    border-right: 5px solid $grey;
+    height: 80%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h5 {
+      font-size: 2.5rem;
+    }
+
+    @include sm {
+      height: 100%;
+    }
+  }
+
+  .sign-form {
+    width: 80%;
+    text-align: left;
+
+    @include sm {
+      width: 60%;
+    }
+  }
+
+  .info-box {
+    border-right: 5px solid $grey;
+    height: 100%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $grey;
+    background-color: $grey;
+    padding-top: 1rem;
+
+    @include md {
+      background-color: inherit;
+    }
+
+    h5 {
+      color: $white;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+
+    .info-container {
+      background-color: $grey;
+      height: 50rem;
+
+
+      @include md {
+        height: 30vh;
+        border-radius: 9999rem;
+        border: 5px solid $white;
+
+      }
+
+      width: 100%;
+
+      .preview {
+        // height: 20vh;
+        // height: 100%;
+
+        h4 {
+          font-size: 2rem;
+          font-weight: 700;
+          padding: 1.5rem 0 2rem;
+
+          @include md {
+            font-size: 1.2rem;
+            font-weight: 700;
+            padding: 1.2rem 0 1rem;
+          }
+
+        }
+
+        img {
+          // height: 20vh;
+          height: 20rem;
+          width: 12rem;
+
+          @include md {
+            height: 6rem;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+}

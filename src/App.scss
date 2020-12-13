@@ -1,0 +1,113 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "utilities/_variables";
+
+
+
+body {
+  background-color: $grey !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 50vh;
+  width: 100%;
+
+  background-image: url("./assets/hero-small.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  color: $grey;
+  font-family: raisonne;
+
+  .input-container {
+    position: fixed;
+    z-index: 1;
+    top: 40vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    border: 10px solid $dark-blue;
+    background: $light-blue;
+    border-radius: 10px;
+    padding: 5vw 5vw 0 5vw;
+
+    .forgot {
+      font-style: italic;
+      margin: 0;
+      font-size: .75rem;
+    }
+
+    .new-user {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 2vh;
+
+      button {
+        background: transparent;
+        color: $grey;
+        height: 5vh;
+        width: 20vw;
+        border-radius: 15px;
+        font-family: raisonne;
+        border: 2px solid $grey;
+      }
+    }
+
+    .input {
+      margin: 1vh;
+      padding: 2vh;
+
+      border-radius: 15px;
+      border: white;
+    }
+
+    .heading {
+      margin-top: 0;
+      margin-bottom: 1vh;
+    }
+
+    .log-button {
+      height: 5vh;
+      width: 30vw;
+      margin-top: 2vh;
+
+      background-color: $grey;
+
+      border: 3px solid $white;
+      border-radius: 15px;
+
+      color: $white;
+      font-family: raisonne;
+      font-size: 1.5em;
+    }
+  }
+}
+
+.mobile-nav-bar {
+  background-color: $dark-blue;
+  color: $white !important;
+  font-family: raisonne;
+  box-shadow: 2px 2px rgba(0, 98, 90, 0.4),
+  4px 4px rgba(0, 98, 90, 0.3),
+  6px 6px rgba(0, 98, 90, 0.2);
+  position: sticky;
+
+  a {
+    color: $white !important;
+    font-size: 2rem;
+  }
+}

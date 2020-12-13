@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: "raisonne-demibold";
+  src: url("raisonne-demibold.eot");
+  src: url("raisonne-demibold.eot?#iefix") format("embedded-opentype"),
+    url("raisonne-demibold.woff2") format("woff2"),
+    url("raisonne-demibold.woff") format("woff"),
+    url("raisonne-demibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,23 @@
+/*
+ * Web Fonts from colophon-foundry.org
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Colophon Foundry. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2020 Colophon Foundry
+ *
+ * Licenced to Renee Strecker Travel Voy
+ */
+
+@font-face {
+    font-family: 'raisonne-demibold';
+    src: url('raisonne-demibold.eot');
+    src: url('raisonne-demibold.eot?#iefix') format('embedded-opentype'),
+         url('raisonne-demibold.woff2') format('woff2'),
+         url('raisonne-demibold.woff') format('woff'),
+         url('raisonne-demibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

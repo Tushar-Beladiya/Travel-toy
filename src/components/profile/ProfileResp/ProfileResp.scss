@@ -1,0 +1,217 @@
+$grey: #555b6e;
+$dark-blue: #89b0ae;
+$light-blue: #bee3db;
+$white: #faf9f9;
+$orange: #ffd6ba;
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 544px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+
+///////////////////
+// modal width
+///////////////////
+.modal-90w {
+  max-width: 100vw !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  @include sm {
+    max-width: 80vw !important;
+  }
+
+  @include md {
+    max-width: 80vw !important;
+  }
+
+  @include lg {
+    max-width: 70vw !important;
+  }
+
+  @include xl {
+    max-width: 65vw !important;
+  }
+}
+
+.modal {
+  padding: 0 !important;
+
+  @include sm {
+    padding: 0 !important;
+  }
+}
+
+
+.profile-container {
+  padding: 0 !important;
+  text-align: center;
+  font-family: raisonne;
+  color: $white;
+  background: $grey;
+
+  @include lg {
+    padding-left: 5rem !important;
+  }
+
+  @include md {
+    padding-left: 4rem !important;
+  }
+
+  .border-bottom-prof {
+    margin-bottom: 3vh;
+    height: 100%;
+    padding-bottom: 1.5rem;
+
+    @include md {
+      height: 20vh;
+      padding-bottom: 0;
+    }
+  }
+
+  .logout-button {
+    background-color: $light-blue;
+    border-color: $light-blue;
+    color: $grey;
+  }
+
+  .logout-button:hover,
+  .logout-button:active,
+  .logout-button:focus,
+  .logout-button {
+    background-color: $light-blue !important;
+    border-color: $light-blue !important;
+    color: $grey !important;
+  }
+
+  .hero-image {
+    height: 25vh;
+
+    @include md {
+      height: 30vh;
+    }
+
+    @include lg {
+      height: 35vh;
+    }
+
+    @include xl {
+      height: 40vh;
+    }
+  }
+
+  .profile-info {
+    // height: 30vh;
+    height: 100%;
+  }
+
+  .profile-pic {
+    margin-top: -10vh;
+    margin-left: -1.5rem;
+    height: 100%;
+
+    @include md {
+      height: 45vh;
+      margin-top: -30vh;
+      margin-left: 0;
+    }
+
+    .selfie {
+      height: 30vw;
+      width: 30vw;
+      border: 5px solid $white;
+    }
+  }
+
+  .map-outside {
+    // border: 5px solid $dark-blue;
+    height: 60vh;
+    width: 100%;
+    padding: 1.5rem !important;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+
+    @include md {
+      width: 50vw;
+      padding: 0 !important;
+      margin-top: 0;
+    }
+  }
+
+  .new-trip-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $orange;
+    color: $grey;
+    border: 3px solid $orange;
+    margin-top: 3vh;
+  }
+
+  .new-trip {
+    display: flex;
+    flex-direction: row;
+    height: 9vh;
+    border: 5px solid $light-blue;
+    margin-top: 0;
+
+    @include md {
+      margin-top: 15vh;
+
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    .material-icons {
+      font-size: 4vw;
+      margin-left: 1vw;
+      margin-top: 1vh;
+    }
+  }
+
+  .show-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    height: 65%;
+  }
+}
